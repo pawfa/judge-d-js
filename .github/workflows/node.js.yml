@@ -26,16 +26,16 @@ jobs:
       - run: npm run build
       - run: npm test
       - name: Archive build artifacts
-        if: matrix.node-version == '14.*'
+        if: startsWith(matrix.node-version, '14')
         uses: actions/upload-artifact@v2
         with:
           name: build-${{ matrix.node-version }}
-          path: lib
+          path: bin
 
   release:
     name: Release
     needs: build
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -50,3 +50,4 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-14.x
+      - run: npm ci
