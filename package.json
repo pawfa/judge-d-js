@@ -19,7 +19,8 @@
     "scripts": {
         "build": "tsc -p tsconfig.json",
         "test": "jest",
-        "release": "semantic-release"
+        "release": "semantic-release",
+        "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\""
     },
     "repository": {
         "type": "git",
@@ -31,26 +32,26 @@
     },
     "homepage": "https://github.com/HLTech/judge-d-js",
     "devDependencies": {
-        "@types/ejs": "^3.0.6",
-        "@types/jest": "^26.0.20",
-        "@types/mock-fs": "^4.13.0",
-        "@types/yargs": "^15.0.13",
-        "factory.ts": "^0.5.1",
-        "husky": "^4.3.8",
-        "jest": "^26.6.3",
-        "mock-fs": "^4.13.0",
-        "prettier": "^2.2.1",
+        "@types/ejs": "^3.1.2",
+        "@types/jest": "^29.5.1",
+        "@types/mock-fs": "^4.13.1",
+        "@types/yargs": "^17.0.24",
+        "factory.ts": "^1.4.1",
+        "husky": "^8.0.0",
+        "jest": "^29.5.0",
+        "mock-fs": "^5.2.0",
+        "prettier": "^2.8.8",
         "pretty-quick": "^3.1.0",
-        "ts-jest": "^26.5.2",
-        "typescript": "^4.2.2"
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.4"
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org/",
         "tag": "latest"
     },
     "dependencies": {
-        "axios": "^0.26.0",
-        "ejs": "^3.1.6",
-        "yargs": "^17.3.1"
+        "axios": "^1.4.0",
+        "ejs": "^3.1.9",
+        "yargs": "^17.7.2"
     }
 }

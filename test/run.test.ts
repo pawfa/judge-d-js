@@ -4,7 +4,6 @@ import path from 'path';
 import fs from 'fs';
 import { run } from '../src';
 import { publish } from '../src/commands/publish';
-import { mocked } from 'ts-jest/utils';
 import { processMockFactory } from './mocks/process.mock';
 import { validationResultMockFactory } from './mocks/validationResult.mock';
 
@@ -37,7 +36,7 @@ describe('run', () => {
 
     test('catches axios post error, forwards message to console.error and call process exit', async () => {
         jest.spyOn(console, 'error').mockImplementationOnce(() => {});
-        mocked(publish).mockImplementation(() => {
+        jest.mocked(publish).mockImplementation(() => {
             throw {
                 isAxiosError: true,
                 message: 'error message',
@@ -53,7 +52,7 @@ describe('run', () => {
     });
 
     test('catches error other than axios, forwards message to console.error and call process exit', async () => {
-        mocked(publish).mockImplementation(() => {
+        jest.mocked(publish).mockImplementation(() => {
             throw { message: 'error message' };
         });
         const processMock = processMockFactory.build();
@@ -66,10 +65,10 @@ describe('run', () => {
 
     test('it generates report when verify is called with correct arguments', async () => {
         const validationResultsMock = [validationResultMockFactory.build()];
-        mocked(axios.get).mockResolvedValueOnce({
+        jest.mocked(axios.get).mockResolvedValueOnce({
             data: validationResultsMock,
         });
-        mocked(ejs.renderFile).mockResolvedValueOnce('report content');
+        jest.mocked(ejs.renderFile).mockResolvedValueOnce('report content');
         jest.spyOn(fs, 'existsSync').mockReturnValue(false);
 
         const processMock = processMockFactory.build({
@@ -115,7 +114,7 @@ describe('run', () => {
     });
 
     test('it process exit when command verify is called and one of the interaction failed', async () => {
-        mocked(axios.get).mockResolvedValueOnce({
+        jest.mocked(axios.get).mockResolvedValueOnce({
             data: [
                 validationResultMockFactory.build({
                     interactions: [

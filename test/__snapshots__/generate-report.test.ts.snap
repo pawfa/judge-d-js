@@ -6,17 +6,17 @@ exports[`generateReport returns html report with all interactions passed 1`] = `
 <head>
     <title>Pact validation report</title>
 
-    <link rel=\\"stylesheet\\" href=\\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css\\"
-          integrity=\\"sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4\\" crossorigin=\\"anonymous\\">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body>
 
-<div class=\\"container\\">
+<div class="container">
     <h1>Pact validation result</h1>
     
-        <ul class=\\"list-group list-group-flush\\">
+        <ul class="list-group list-group-flush">
             
-                <li class=\\"list-group-item\\">
+                <li class="list-group-item">
                     
                         <h5>
                             Interaction between
@@ -35,13 +35,13 @@ exports[`generateReport returns html report with all interactions passed 1`] = `
                         Provider version = provider-version
                         <br/>
                         <br/>
-                        <table class=\\"table table-sm\\">
+                        <table class="table table-sm">
                             <caption>interactions</caption>
-                            <thead class=\\"thead-dark\\">
+                            <thead class="thead-dark">
                             <tr>
-                                <th scope=\\"col\\">Interaction name</th>
-                                <th scope=\\"col\\">Result</th>
-                                <th scope=\\"col\\">Errors</th>
+                                <th scope="col">Interaction name</th>
+                                <th scope="col">Result</th>
+                                <th scope="col">Errors</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -92,17 +92,17 @@ exports[`generateReport returns html report with failed interaction 1`] = `
 <head>
     <title>Pact validation report</title>
 
-    <link rel=\\"stylesheet\\" href=\\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css\\"
-          integrity=\\"sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4\\" crossorigin=\\"anonymous\\">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body>
 
-<div class=\\"container\\">
+<div class="container">
     <h1>Pact validation result</h1>
     
-        <ul class=\\"list-group list-group-flush\\">
+        <ul class="list-group list-group-flush">
             
-                <li class=\\"list-group-item\\">
+                <li class="list-group-item">
                     
                         <h5>
                             Interaction between
@@ -121,13 +121,13 @@ exports[`generateReport returns html report with failed interaction 1`] = `
                         Provider version = provider-version
                         <br/>
                         <br/>
-                        <table class=\\"table table-sm\\">
+                        <table class="table table-sm">
                             <caption>interactions</caption>
-                            <thead class=\\"thead-dark\\">
+                            <thead class="thead-dark">
                             <tr>
-                                <th scope=\\"col\\">Interaction name</th>
-                                <th scope=\\"col\\">Result</th>
-                                <th scope=\\"col\\">Errors</th>
+                                <th scope="col">Interaction name</th>
+                                <th scope="col">Result</th>
+                                <th scope="col">Errors</th>
                             </tr>
                             </thead>
                             <tbody>
